@@ -1,0 +1,25 @@
+function isPowerN(k, n) {
+    let x = 0
+    let k1 = 0
+    do {
+        x++
+        k1 = Math.pow(n, x)
+    } while (k1 < k)
+    if (k1 == k)
+        return true
+    else
+        return false
+
+}
+let pw = 0
+let n = +prompt('n = ')
+for (let i = 0; i < 10; i++) {
+    let x = +prompt(`x${i + 1} = `)
+    console.log(`x${i + 1} = `, x)
+    console.log(isPowerN(x, n))
+    if ((isPowerN(x, n)) == 1) {
+        pw++
+    }
+
+}
+console.log(`power${n} = `, pw)
